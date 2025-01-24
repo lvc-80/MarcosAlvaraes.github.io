@@ -1,176 +1,209 @@
 <!DOCTYPE html>
-<html lang="pt-pt">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estrutura1</title>
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <meta name="description" content="Site pessoal acessível de acordo com as diretrizes WCAG 2.0 nível AA.">
+    <title>Site Pessoal Acessível</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header, main, footer {
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 20px;
+        }
+        nav {
+            background-color: #004080;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #FFFFFF;
+            font-weight: bold;
+            padding: 10px 15px;
+            display: inline-block;
+            border-radius: 5px;
+        }
+        nav a:focus, nav a:hover {
+            background-color: #0056b3;
+            color: #ffffff;
+            outline: 2px solid #FFD700;
+            outline-offset: 2px;
+        }
+        nav a:active {
+            background-color: #003366;
+        }
+        .high-contrast {
+            color: #000;
+            background-color: #FFF;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        button:focus {
+            outline: 2px solid #0056b3;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .error-message {
+            color: #D8000C;
+            background-color: #FFD2D2;
+            padding: 5px;
+            margin-top: 5px;
+            display: none;
+        }
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #000;
+            color: #fff;
+            padding: 8px;
+            z-index: 100;
+            text-decoration: none;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+        main {
+            padding-top: 80px; /* Compensar o tamanho da barra de navegação fixa */
+        }
+    </style>
 </head>
-<style>
-    .col-grey{
-     /*   background-color: lightgray; */
-      /*  border: 2px solid white; */
-	/* border-radius: 4px; */
-      /*  text-align: center; */
-    }
-</style>
-<div class="container-fluid">
-    <!-- primeira linha -->
-    <div class="row">
-        <div class="col-md-12">
-            
-            
-             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">Marcos Alvarães</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-              
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                        Dropdown
-                      </a>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                      </div>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link disabled">Disabled</a>
-                    </li>
-                  </ul>
-                  <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                  </form>
-                </div>
-              </nav>    
-            
-            
-        </div>
-    </div>
-    <!-- segunda linha -->
-    <div class="row">
-        <div class="col-md-12">
-              
-        
-             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="/image/1.jpg" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="/image/2.jpg" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="/image/3.jpg" class="d-block w-100" alt="...">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </button>
-              </div>
-        
-        
-        
-        
-        </div>
-    </div>
-</div>
-<div class="container">
-    <!-- terceira linha -->
-    <div class="row">
-        <div class="col-md-4" align="center">
-              
-        
-             <div class="card" style="width: 18rem;">
-                <img src="/image/3.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
+<body>
 
-        </div>
-        <div class="col-md-4" align="center">
-             
-             <div class="card" style="width: 18rem;">
-                <img src="/image/1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
+    <!-- Link para pular para o conteúdo principal -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
 
-        </div>
-        <div class="col-md-4" align="center">
-              
-             <div class="card" style="width: 18rem;">
-                <img src="/image/2.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            
-        </div>
-    </div>
-</div>
-<div class="container-fluid">
-    <!-- quarta linha -->
-    <div class="row">
-        <div class="col-md-10" style="background-color: lightgray;">
+    <!-- Barra de Navegação -->
+    <header>
+        <nav aria-label="Menu principal">
+            <a href="#about" tabindex="1">Sobre</a>
+            <a href="#projects" tabindex="2">Projetos</a>
+            <a href="#contact" tabindex="3">Contato</a>
+        </nav>
+    </header>
 
-			<small id="copyright">
-				&copy; IEFP. Todos os Direitos Reservados.
-			</small>
-        </div>
-        <div class="col-md-2" style="background-color: lightgray;">    
-                <div class="badge badge-primary text-wrap" style="width: 6rem;">
-                    UFCD 0154 Css com Bootstrap.
-                </div>
+    <!-- Conteúdo Principal -->
+    <main id="main-content">
+        <section id="about" aria-labelledby="about-heading">
+            <h1 id="about-heading">Bem-vindo ao Meu Site</h1>
+            <p>A acessibilidade web ajuda pessoas com deficiência a navegarem por um site e acederem conteúdos através de ferramentas específicas, como um leitor de ecrã.
+                Ao tornar o site acessível, permitimos que mais pessoas possam interagir com o mesmo proporcionando uma boa experiência.
+                </p>
+        </section>
 
+        <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Projetos</h2>
+            <article>
+                <h3>Projeto 1</h3>
+                <p>Pretende-se então construir um site pessoal com uma página, ou como também é denominado “one page”, acessível, que cumpra os aspetos de acessibilidade. </p>
+                    <p> As Diretrizes de Acessibilidade para Conteúdo Web (WCAG) oferecem um padrão global de conteúdos acessíveis que cumprem com as obrigações legais e possibilitam a inclusão de todos assim como de organizações na internet. </p>
+                        <p>Devemos tomar como nota de partida a diretrizes WCAG 2.0 (https://www.w3.org/Translations/WCAG20-pt-PT/). Esta diretrizes seguem 4 princípios: percetível, operável, compreensível e robusto. </p>
+                        <p>Existem 3 níveis de conformidade, nível A, nível AA e nível AAA. </p>
+                            <p>Para o nosso trabalho vamos apontar a elaboração para o nível AA. </p>
+                                <p>Para uma conformidade de Nível AA, a página Web satisfaz todos os Critérios de Sucesso de Nível A e Nível AA ou é fornecida uma versão alternativa em conformidade com o Nível AA.
+                    </p>
+                <img src="IEFP_logo.png" alt="Exemplo de um projeto com design acessível">
+            </article>
+            <article>
+                <h3>Projeto 2</h3>
+                <p>1.	Uso de HTML Semântico
+                    O conteúdo deve ser estruturado com elementos ou tags semânticas. Isto ajuda os leitores de ecrã a compreender a hierarquia do site.</p>
+                    <p> 2.	Descrições Alternativas em Imagens
+                    As imagens devem ter texto descritivo, no seu atributo 'alt'. Por exemplo, em vez de "imagem1.jpg", utilize algo como "Fotografia de uma praia ao pôr do sol".</p>
+                    <p>3.	Contraste de Cores
+                    O texto deve ter contraste suficiente em relação ao fundo. Um bom contraste facilita a leitura para pessoas com baixa visão. Ferramentas como Contrast Checker são úteis para este fim.</p>
+                    <p>4.	Navegação via Teclado
+                    É importante que todos os elementos interativos (botões, links, menus) possam ser acedidos apenas com o teclado, utilizando para isso a tecla Tab.</p>
+                    <p>5.	Legendas e Transcrições
+                    Para vídeos e conteúdos multimédia, é importante o uso legendas e transcrições. Isto beneficia não apenas pessoas com deficiência auditiva, mas também utilizadores que preferem ler ou estão em ambientes ruidosos.</p>
+                    <p>6.	Feedback Visual e Auditivo
+                    Ao interagir com o site (como enviar um formulário), indicações claras, como mensagens de erro visíveis ou confirmações de ação bem-sucedida, são cruciais para o utilizador obter feedback da sua interação.</p>
+                    <p>7.	Evitar Depender Apenas de Cores
+                    Não se deve usar apenas cores para transmitir informações. Deve-se, por exemplo, combinar cor com ícones ou texto para reforçar a mensagem que se quer transmitir.
+                    </p>
+                <img src="IEFP_logo2.png" alt="Captura de tela do segundo projeto">
+            </article>
+        </section>
 
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contato</h2>
+            <form action="#" method="post">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required aria-required="true"><br>
+                <span id="name-error" class="error-message">Por favor, preencha seu nome.</span>
 
-        </div>
-    </div>
-</div>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required aria-required="true"><br>
+                <span id="email-error" class="error-message">Por favor, insira um e-mail válido.</span>
 
+                <label for="message">Mensagem:</label><br>
+                <textarea id="message" name="message" rows="5" required aria-required="true"></textarea><br>
+                <span id="message-error" class="error-message">Por favor, escreva sua mensagem.</span>
 
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
 
+        <section id="video" aria-labelledby="video-heading">
+            <h2 id="video-heading">Vídeo de Apresentação</h2>
+            <video controls>
+                <source src="Pontes de Konigsberg.mp4" type="video/mp4">
+                <track src="legendas.vtt" kind="subtitles" srclang="pt" label="Português">
+                O seu navegador não suporta vídeos HTML5.
+            </video>
+            <p>Este vídeo inclui legendas para maior acessibilidade.</p>
+        </section>
+    </main>
 
+    <!-- Rodapé -->
+    <footer>
+        <p>Site criado por Marcos Alvarães, IEFP.</p>
+    </footer>
 
+    <!-- Script para ajustar a rolagem -->
+    <script>
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                const offset = document.querySelector('nav').offsetHeight; // Altura da barra fixa
+                const elementPosition = targetElement.offsetTop;
+                const offsetPosition = elementPosition - offset;
 
-    
-
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
+
+
