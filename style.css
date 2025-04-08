@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+}
+
+/* Layout dos iframes */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+iframe {
+    width: 150px; /* Tamanho do espaço do ícone */
+    height: 150px; /* Altura suficiente para imagem + nome */
+    border: none; /* Remove a borda do iframe */
+    overflow: hidden; /* Esconde qualquer barra de navegação */
+}
+
+/* Dentro do iframe: Ajustar a imagem para ser um ícone */
+iframe body img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%; /* Transforma em círculo */
+    display: block;
+    margin: 0 auto;
+}
